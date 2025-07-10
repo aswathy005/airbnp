@@ -6,28 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>airbnp</title>
     <style>
-        .mainbed {
-            width: 200px;
-            height: 200px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 30px;
-            row-gap: 40px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
         }
-
-        img {
-            border-radius: 5%;
-        }
-
-
-        /* navigation bar */
 
         .where {
             background-color: white;
             border-radius: 20px;
             width: 300px;
             height: 40px;
+            border-right: 1px solid #ddd;
         }
 
         .where:hover {
@@ -39,6 +30,7 @@
             border-radius: 20px;
             width: 150px;
             height: 40px;
+            border-right: 1px solid #ddd;
         }
 
         .check:hover {
@@ -50,6 +42,7 @@
             border-radius: 20px;
             width: 150px;
             height: 40px;
+            border-right: 1px solid #ddd;
         }
 
         .who:hover {
@@ -72,21 +65,128 @@
             background-color: rgb(210, 209, 209);
         }
 
-        .nav {
-            height: fit-content;
+        .container1 {
             background-color: white;
+            margin: 30px auto;
+            padding: 10px 20px;
+            border-radius: 30px;
             display: flex;
-
-            width: fit-content;
-            height: 200px;
-            justify-content: space-evenly;
-            text-align: center;
+            justify-content: space-between;
+            max-width: 800px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            align-items: center;
         }
 
-        /* .container1 {
-            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-        } */
+        .nav {
+            display: flex;
+            padding: 0 10px;
+            border-right: 1px solid #ddd;
+
+        }
+
+        .nav:last-child {
+            border-right: none;
+        }
+
+        .search-button {
+            background-color: #ff385c;
+            border: none;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #e03150;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .homes-container {
+           
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
+            row-gap: 40px;
+            padding-top: 5px;
+            gap: 16px;
+            padding-bottom: 2px;
+        }
+
+        .home-card {
+            flex: 0 0 auto;
+            width: 220px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            background-color: white;
+            position: relative;
+        }
+
+        .home-card img {
+            width: 100%;
+            height: 160px;
+            justify-content: space-evenly;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: white;
+            color: black;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .heart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        .home-info {
+            padding: 10px;
+        }
+
+        .home-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .home-price {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .Thiruvananthapuram {
+
+            margin-top: -240px;
+        }
     </style>
+
 </head>
 
 <body>
@@ -107,6 +207,9 @@
                 <div class="who">who <br>
                     <input type="text" placeholder="add guests">
                 </div>
+                <button class="search-button">
+                    🔍
+                </button>
 
             </div>
         </div>
@@ -114,27 +217,165 @@
 
     </div>
 
-    </form>
+    </head>
 
-    </div>
-    <!-- images -->
-    <div class="mainbed">
-        <div class="bed"><img src="bed1.avif" height="200px" width="200px" alt=""></div>
-        
-        <div class="bed"><img src="bed2.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed3.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed4.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed5.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed6.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed7.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed8.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed9.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed10.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed11.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed12.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed13.avif" height="200px" width="200px" alt=""></div>
-        <div class="bed"><img src="bed14.avif" height="200px" width="200px" alt=""></div>
-    </div>
+    <body>
+
+        <h2>Popular homes in Bengaluru ›</h2>
+
+        <div class="homes-container">
+            <div class="home-card">
+                <img src="bed1.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Bengaluru</div>
+                    <div class="home-price">₹3,422 for 2 nights · ★ 5.0</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed2.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Koramangala</div>
+                    <div class="home-price">₹6,504 for 2 nights · ★ 4.93</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed3.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Flat in Bengaluru</div>
+                    <div class="home-price">₹5,478 for 2 nights · ★ 5.0</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed4.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Bengaluru</div>
+                    <div class="home-price">₹8,998 for 2 nights · ★ 4.87</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed5.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Flat in Bengaluru</div>
+                    <div class="home-price">₹2,511 for 2 nights · ★ 4.89</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed6.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Flat in Bengaluru</div>
+                    <div class="home-price">₹3,652 for 2 nights · ★ 4.81</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed7.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Room in BTM Layout</div>
+                    <div class="home-price">₹2,705 for 2 nights · ★ 5.0</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="Thiruvananthapuram">
+
+            <h2>Available in Thiruvananthapuram this weekend</h2>
+        </div>
+
+        <div class="homes-container">
+            <div class="home-card">
+                <img src="bed8.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Koramangala</div>
+                    <div class="home-price">₹6,504 for 2 nights · ★ 4.93</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed9.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Koramangala</div>
+                    <div class="home-price">₹6,504 for 2 nights · ★ 4.93</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed10.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Koramangala</div>
+                    <div class="home-price">₹6,504 for 2 nights · ★ 4.93</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed11.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Koramangala</div>
+                    <div class="home-price">₹6,504 for 2 nights · ★ 4.93</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed12.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Koramangala</div>
+                    <div class="home-price">₹6,504 for 2 nights · ★ 4.93</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed13.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Koramangala</div>
+                    <div class="home-price">₹6,504 for 2 nights · ★ 4.93</div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <img src="bed14.avif" alt="home">
+                <div class="badge">Guest favourite</div>
+                <div class="heart">♡</div>
+                <div class="home-info">
+                    <div class="home-title">Apartment in Koramangala</div>
+                    <div class="home-price">₹6,504 for 2 nights · ★ 4.93</div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+</html>
 </body>
 
 </html>
